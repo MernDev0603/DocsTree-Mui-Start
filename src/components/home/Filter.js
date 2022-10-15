@@ -1,32 +1,19 @@
 import { useState } from 'react'
 import useWindowSize from '../../hooks/useWindowSize'
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, Stack, IconButton, InputBase, useMediaQuery, Typography } from '@mui/material';
+import { Box, InputLabel, Select, MenuItem, Divider, FormControlLabel, FormGroup, FormControl } from '@mui/material';
+import Checkbox, { CheckboxProps } from '@mui/material/Checkbox';
 
 
 // -------------------------------------------------------------
 const RootStyle = styled('div')(({ theme }) => ({
-    width: '100%',
-    padding: '30px 0',
-    backgroundColor: '#E2E4E540'
+    width: '100%'
 }));
 
 const ContainerStyle = styled('div')(({ theme }) => ({
-    width: '100%',
-    maxWidth: '1200px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '0px 15px',
-    margin: '0px auto',
-    [theme.breakpoints.up('sm')]: {
-        padding: '0px 30px',
-        flexDirection: 'row'
-    },
-    [theme.breakpoints.up('md')]: {
-        width: '80%',
-        padding: '0px'
-    }
+    border: '1px solid #E2E4E5',
+    borderRadius: '7px',
+    padding: '10px'
 }));
 
 const InnerContainerStyle = styled('div')(({ theme }) => ({
@@ -48,48 +35,80 @@ const HeaderBTNStyle = styled('button')({
     padding: '10px'
 });
 
-const MenuItemStyle = styled('p')({
+const FilterTitleStyle = styled('p')({
     color: '#313131',
     fontFamily: 'Poppins',
-    fontWeight: 400,
-    fontSize: '18px',
-    padding: '0 10px'
+    fontWeight: 500,
+    fontSize: '14px',
 });
+// -------------------------------------------------------------
+const filter1 = ["Nascimento/Batismo", "Casamento", "Óbito", "Imigração", "Outros"]
+const filter2 = ["Iniciante", "Casamento", "Especialista", "Assessor"]
+const filter3 = ["Digital", "Casamento", "Físico", "Apostilado"]
+
 // -------------------------------------------------------------
 
 export default function Filter() {
-    const { width } = useWindowSize()
-    const [open, setOpen] = useState(false)
+    const [age, setAge] = useState('');
 
-    const menuList1 = [
-        { name: 'Como funciona' },
-        { name: 'Seja pesquisador' },
-        { name: 'Ajuda' }
-    ]
-
-    const menuList2 = [
-        { name: 'Cadastre-se' },
-        { name: 'Entrar' }
-    ]
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
 
     return (
         <RootStyle>
             <ContainerStyle>
-                <InnerContainerStyle>
-                    <MenuWrapperStyle>
-                        {menuList1.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                    <MenuWrapperStyle>
-                        {menuList2.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                </InnerContainerStyle>
-                <HeaderBTNStyle>
-                    Buscar documento
-                </HeaderBTNStyle>
+                <FilterTitleStyle>Tipo de documento</FilterTitleStyle>
+                <FormGroup>
+                    {filter1.map((item, index) => (
+                        <FormControlLabel key={index}
+                            control={
+                                <Checkbox
+                                    sx={{
+                                        '& .MuiSvgIcon-root': { fontSize: 16 },
+                                        color: '#17686E',
+                                        '&.Mui-checked': {
+                                            color: '#17686E',
+                                        }
+                                    }}
+                                />
+                            }
+                            label={item} size="small"
+                            sx={{ '& .MuiFormControlLabel-label': { fontSize: '14px' } }}
+                        />
+                    ))}
+                </FormGroup>
+
+                <Divider />
+
+                <FilterTitleStyle>País de pesquisa</FilterTitleStyle>
+                <FormControl fullWidth size="small">
+                    {/* <InputLabel id="demo-simple-select-label">Todos países</InputLabel> */}
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
+                        label="Age"
+                        onChange={handleChange}
+                        placeholder="sdfsdfsd"
+                    >
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
+
+                <Divider />
+
+                <FilterTitleStyle>Quantidade propostas recebidas</FilterTitleStyle>
+                <Divider />
+                <FilterTitleStyle>Avaliação do Cliente</FilterTitleStyle>
+                <Divider />
+                <FilterTitleStyle>Data de Publicação</FilterTitleStyle>
+                <Divider />
+                <FilterTitleStyle>Nível exigido</FilterTitleStyle>
+                <Divider />
+                <FilterTitleStyle>Forma de recebimento do documento</FilterTitleStyle>
             </ContainerStyle>
         </RootStyle>
     )

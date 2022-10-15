@@ -6,26 +6,21 @@ import { Box, Stack, IconButton, InputBase, useMediaQuery, Typography } from '@m
 
 // -------------------------------------------------------------
 const RootStyle = styled('div')(({ theme }) => ({
-    width: '100%',
-    padding: '30px 0',
-    backgroundColor: '#E2E4E540'
+    width: '100%'
 }));
 
 const ContainerStyle = styled('div')(({ theme }) => ({
     width: '100%',
     maxWidth: '1200px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '0px 15px',
+    // padding: '0px 15px',
     margin: '0px auto',
     [theme.breakpoints.up('sm')]: {
-        padding: '0px 30px',
-        flexDirection: 'row'
+        // padding: '0px 30px',
+        // flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
-        width: '80%',
-        padding: '0px'
+        // width: '80%',
+        // padding: '0px'
     }
 }));
 
@@ -61,36 +56,10 @@ export default function Content() {
     const { width } = useWindowSize()
     const [open, setOpen] = useState(false)
 
-    const menuList1 = [
-        { name: 'Como funciona' },
-        { name: 'Seja pesquisador' },
-        { name: 'Ajuda' }
-    ]
-
-    const menuList2 = [
-        { name: 'Cadastre-se' },
-        { name: 'Entrar' }
-    ]
-
     return (
         <RootStyle>
-            <ContainerStyle>
-                <InnerContainerStyle>
-                    <MenuWrapperStyle>
-                        {menuList1.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                    <MenuWrapperStyle>
-                        {menuList2.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                </InnerContainerStyle>
-                <HeaderBTNStyle>
-                    Buscar documento
-                </HeaderBTNStyle>
-            </ContainerStyle>
+            fgdfgffsd
+            dsfsdfsdf
         </RootStyle>
     )
 }

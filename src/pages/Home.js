@@ -8,20 +8,19 @@ import Content from '../components/home/Content';
 
 // -------------------------------------------------------------
 const RootStyle = styled('div')(({ theme }) => ({
-    width: '100%',
+    width: '100%'
 }));
 
 const ContainerStyle = styled('div')(({ theme }) => ({
     width: '100%',
     maxWidth: '1200px',
-    padding: '0px 15px',
-    margin: '0px auto',
+    margin: '10px auto',
     [theme.breakpoints.up('sm')]: {
-        padding: '0px 30px',
+        // padding: '30px',
     },
     [theme.breakpoints.up('md')]: {
         width: '80%',
-        padding: '0px'
+        // padding: '10px'
     }
 }));
 // -------------------------------------------------------------
@@ -33,7 +32,7 @@ export default function Home() {
         <RootStyle>
             <Banner />
             <ContainerStyle>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
                     <Grid item xs={12} sm={6} md={3}>
                         <Filter />
                     </Grid>

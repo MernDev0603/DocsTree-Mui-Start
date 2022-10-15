@@ -18,15 +18,15 @@ const ContainerStyle = styled('div')(({ theme }) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '0px 15px',
+    // padding: '0px 15px',
     margin: '0px auto',
     [theme.breakpoints.up('sm')]: {
-        padding: '0px 30px',
+        // padding: '0px 30px',
         flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
         width: '80%',
-        padding: '0px'
+        // padding: '0px'
     }
 }));
 
