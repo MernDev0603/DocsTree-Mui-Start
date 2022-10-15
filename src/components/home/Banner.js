@@ -1,8 +1,4 @@
-import { useState } from 'react'
-import useWindowSize from '../../hooks/useWindowSize'
-import { styled, useTheme } from '@mui/material/styles';
-import { Box, Stack, IconButton, InputBase, useMediaQuery, Typography } from '@mui/material';
-
+import { styled } from '@mui/material/styles';
 
 // -------------------------------------------------------------
 const RootStyle = styled('div')(({ theme }) => ({
@@ -14,14 +10,10 @@ const RootStyle = styled('div')(({ theme }) => ({
 const ContainerStyle = styled('div')(({ theme }) => ({
     width: '100%',
     maxWidth: '1200px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     padding: '0px 15px',
     margin: '0px auto',
     [theme.breakpoints.up('sm')]: {
         padding: '0px 30px',
-        flexDirection: 'row'
     },
     [theme.breakpoints.up('md')]: {
         width: '80%',
@@ -29,67 +21,40 @@ const ContainerStyle = styled('div')(({ theme }) => ({
     }
 }));
 
-const InnerContainerStyle = styled('div')(({ theme }) => ({
-    width: '65%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-}));
-
-const MenuWrapperStyle = styled('div')(({ theme }) => ({
-    display: 'flex',
-}));
-
-const HeaderBTNStyle = styled('button')({
-    color: '#17686E',
-    border: '1px solid #17686E',
-    borderRadius: '5px',
-    backgroundColor: '#fff',
-    padding: '10px'
+const BannerTitleStyle = styled('p')({
+    color: '#313131',
+    fontFamily: 'Poppins',
+    fontWeight: 300,
+    fontSize: '100px',
+    margin: 0
 });
 
-const MenuItemStyle = styled('p')({
+const BannerTextStyle = styled('p')({
     color: '#313131',
     fontFamily: 'Poppins',
     fontWeight: 400,
-    fontSize: '18px',
-    padding: '0 10px'
+    fontSize: '16px'
 });
+
+const BannerBTNStyle = styled('button')({
+    color: '#fff',
+    backgroundColor: '#17686E',
+    borderRadius: '5px',
+    padding: '15px 10px',
+    border: 'none'
+});
+
+
 // -------------------------------------------------------------
 
 export default function Banner() {
-    const { width } = useWindowSize()
-    const [open, setOpen] = useState(false)
-
-    const menuList1 = [
-        { name: 'Como funciona' },
-        { name: 'Seja pesquisador' },
-        { name: 'Ajuda' }
-    ]
-
-    const menuList2 = [
-        { name: 'Cadastre-se' },
-        { name: 'Entrar' }
-    ]
 
     return (
         <RootStyle>
             <ContainerStyle>
-                <InnerContainerStyle>
-                    <MenuWrapperStyle>
-                        {menuList1.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                    <MenuWrapperStyle>
-                        {menuList2.map((item, index) => (
-                            <MenuItemStyle key={index}>{item.name}</MenuItemStyle>
-                        ))}
-                    </MenuWrapperStyle>
-                </InnerContainerStyle>
-                <HeaderBTNStyle>
-                    Buscar documento
-                </HeaderBTNStyle>
+                <BannerTitleStyle>Publicações</BannerTitleStyle>
+                <BannerTextStyle>Cria uma publicação e encontre um pesquisador ideal.</BannerTextStyle>
+                <BannerBTNStyle>Solicitar documento</BannerBTNStyle>
             </ContainerStyle>
         </RootStyle>
     )
