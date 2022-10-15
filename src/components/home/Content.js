@@ -58,8 +58,7 @@ export default function Content() {
 
     return (
         <RootStyle>
-            fgdfgffsd
-            dsfsdfsdf
+          
         </RootStyle>
     )
 }
