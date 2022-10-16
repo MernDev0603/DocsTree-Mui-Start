@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Icon } from '@iconify/react';
 import { styled } from '@mui/material/styles';
-import { Box, Stack, InputBase, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Pagination, Box, Stack, InputBase, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import CardItem from './CardItem';
 // -------------------------------------------------------------
 const RootStyle = styled('div')(({ theme }) => ({
@@ -129,6 +129,10 @@ export default function CardList() {
             {cardContent.map((card, index) => (
                 <CardItem key={index} card={card} />
             ))}
+
+            <Stack alignItems="center" sx={{ my: 5 }}>
+                <Pagination count={10} />
+            </Stack>
         </RootStyle>
     )
 }
