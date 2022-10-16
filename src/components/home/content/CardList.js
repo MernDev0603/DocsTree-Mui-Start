@@ -48,6 +48,76 @@ const cardContent = [
         familyLink: '--',
         documentForm: 'Digital',
         author: 'Guilherme Matheus'
+    },
+    {
+        id: 1,
+        fullName: 'LUIGI D’ARPINO',
+        time: '1min',
+        proposals: 0,
+        doucumentType: 'Nascimento/Batismo',
+        researchCountry: 'Itália',
+        level: "Iniciante",
+        alternativeName: 'LUIGI DALPINO',
+        Spouse: '--',
+        familyLink: '--',
+        documentForm: 'Digital',
+        author: 'Guilherme Matheus'
+    },
+    {
+        id: 2,
+        fullName: 'LUIGI D’ARPINO',
+        time: '1min',
+        proposals: 0,
+        doucumentType: 'Nascimento/Batismo',
+        researchCountry: 'Itália',
+        level: "Iniciante",
+        alternativeName: 'LUIGI DALPINO',
+        Spouse: '--',
+        familyLink: '--',
+        documentForm: 'Digital',
+        author: 'Guilherme Matheus'
+    },
+    {
+        id: 3,
+        fullName: 'LUIGI D’ARPINO',
+        time: '1min',
+        proposals: 0,
+        doucumentType: 'Nascimento/Batismo',
+        researchCountry: 'Itália',
+        level: "Iniciante",
+        alternativeName: 'LUIGI DALPINO',
+        Spouse: '--',
+        familyLink: '--',
+        documentForm: 'Digital',
+        author: 'Guilherme Matheus'
+    },
+    {
+        id: 4,
+        fullName: 'LUIGI D’ARPINO',
+        time: '1min',
+        proposals: 0,
+        doucumentType: 'Nascimento/Batismo',
+        researchCountry: 'Itália',
+        level: "Iniciante",
+        alternativeName: 'LUIGI DALPINO',
+        Spouse: '--',
+        familyLink: '--',
+        documentForm: 'Digital',
+        author: 'Guilherme Matheus'
+    },
+    {
+        id: 5,
+        fullName: 'LUIGI D’ARPINO',
+        time: '1min',
+        proposals: 0,
+        doucumentType: 'Nascimento/Batismo',
+        researchCountry: 'Itália',
+        level: "Iniciante",
+        alternativeName: 'LUIGI DALPINO',
+        Spouse: '--',
+        familyLink: '--',
+        documentForm: 'Digital',
+        author: 'Guilherme Matheus'
     }
 ]
 // -------------------------------------------------------------

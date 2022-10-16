@@ -7,7 +7,8 @@ const RootStyle = styled('div')(({ theme }) => ({
     width: '100%',
     border: '1px solid #c6c6c6',
     borderRadius: '7px',
-    padding: '20px'
+    padding: '20px 20px 10px 20px',
+    margin: '10px 0'
 }));
 
 const TitleStyle = styled('p')({
@@ -68,6 +69,16 @@ const MoreTitleStyle = styled('p')({
 
 const InnerContainerStyle = styled('div')(({ theme }) => ({
     margin: '0 30px'
+}));
+
+const MakeProposalBTNStyle = styled('button')(({ theme }) => ({
+    color: '#17686E',
+    fontWeight: 600,
+    fontSize: '14px',
+    backgroundColor: '#fff',
+    border: '1px solid #17686E',
+    borderRadius: '5px',
+    padding: '10px'
 }));
 
 // -------------------------------------------------------------
@@ -132,6 +143,18 @@ export default function CardItem({ card }) {
                     </InfoTextStyle>
                 </InnerContainerStyle>
             </MoreContainerStyle>
+
+            <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mt: '10px' }}>
+                <Stack direction="row" alignItems="center" spacing={1}>
+                    <Icon icon="healthicons:ui-user-profile-outline" color="#E2E4E5" width="27" />
+                    <TitleStyle sx={{ fontSize: '12px' }}>{card.author}</TitleStyle>
+                </Stack>
+
+                <Stack direction="row" alignItems="center" spacing={1}>
+                    <InfoTextStyle>Ver mais detalhes</InfoTextStyle>
+                    <MakeProposalBTNStyle>Fazer proposta</MakeProposalBTNStyle>
+                </Stack>
+            </Stack>
 
         </RootStyle>
     )
