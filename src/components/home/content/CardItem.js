@@ -86,7 +86,11 @@ const MakeProposalBTNStyle = styled('button')(({ theme }) => ({
 export default function CardItem({ card }) {
 
     return (
-        <RootStyle>
+        <RootStyle
+            sx={{
+                border: card.id == 1 ? '2px solid #C53842' : card.id == 2 ? '2px solid #FFC229' : '1px solid #c6c6c6'
+            }}
+        >
             <TitleStyle>
                 Nome completo:
                 <TextStyle>{card.fullName}</TextStyle>
