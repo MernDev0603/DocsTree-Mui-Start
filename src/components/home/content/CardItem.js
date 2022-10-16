@@ -28,7 +28,7 @@ const TextStyle = styled('span')({
 });
 
 const InfoStyle = styled('div')(({ theme }) => ({
-    width: '20%',
+    width: '25%',
     backgroundColor: '#F1F1F1',
     borderRadius: '7px',
     padding: '3px',
