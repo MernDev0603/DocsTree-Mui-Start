@@ -37,7 +37,7 @@ export default function Home() {
                         <Filter />
                     </Grid>
 
-                    <Grid itme xs={12} sm={6} md={9}>
+                    <Grid item xs={12} sm={6} md={9}>
                         <Content />
                     </Grid>
                 </Grid>
