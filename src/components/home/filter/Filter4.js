@@ -58,7 +58,7 @@ export default function Filter4() {
                             />
                         }
                         label={
-                            <Stack direction="3">
+                            <Stack direction="row">
                                 <Icon icon="el:star" color="#17686e" width="22" />
                                 <Icon icon="el:star" color="#17686e" width="22" />
                                 <Icon icon="el:star" color="#17686e" width="22" />
@@ -67,7 +67,7 @@ export default function Filter4() {
                             </Stack>
                         }
                     />
-                    <FormControlLabel value="2"
+                    <FormControlLabel value="3"
                         control={<Radio
                             sx={{
                                 '& .MuiSvgIcon-root': { fontSize: 16 },
@@ -86,7 +86,7 @@ export default function Filter4() {
                             </Stack>
                         }
                     />
-                    <FormControlLabel value="1"
+                    <FormControlLabel value="2"
                         control={<Radio
                             sx={{
                                 '& .MuiSvgIcon-root': { fontSize: 16 },
@@ -106,7 +106,7 @@ export default function Filter4() {
                             </Stack>
                         }
                     />
-                    <FormControlLabel value="other"
+                    <FormControlLabel value="1"
                         control={<Radio
                             sx={{
                                 '& .MuiSvgIcon-root': { fontSize: 16 },
